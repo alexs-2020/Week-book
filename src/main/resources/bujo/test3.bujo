@@ -1,0 +1,23 @@
+{
+  "name" : "",
+  "theme" : "LIGHTMODE",
+  "limit" : 63,
+  "schedule" : {
+    "events" : [ {
+      "name" : "cry",
+      "description" : "",
+      "day" : "SUNDAY",
+      "hour" : 23,
+      "minute" : 45,
+      "duration" : 30} ]
+  },
+  "todos" : {
+    "tasks" : [ {
+      "name" : "cleaning",
+      "description" : "mop",
+      "day" : "SATURDAY",
+      "isComplete" : false
+    } ]
+  },
+  "notes" : ""
+}

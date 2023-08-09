@@ -1,0 +1,93 @@
+.root {
+    -fx-accent: #46B1C9;
+    -fx-focus-color: -fx-accent;
+    -fx-background: linear-gradient(#84C0C6, #BCC1BA);
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-font-family: Didot;
+
+    -fx-base: #F2E2D2;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background ;
+}
+
+.label{
+    -fx-text-fill: #358597;
+    -fx-font-family: Elephant;
+}
+
+.text-field {
+    -fx-background-color: #FFF4E7;
+    -fx-prompt-text-fill: #FFF4E7;
+    -fx-text-fill: #40A1B7;
+}
+
+.text-area {
+    -fx-text-fill: #40A1B7;
+}
+
+.button{
+    -fx-focus-traversable: false;
+    -fx-text-fill: #358597;
+    -fx-background-color: linear-gradient(#FFF4E7, #BCC1BA);
+    -fx-border-color: #358597;
+    -fx-border-radius: 3;
+    -fx-padding: 3 6 6 6;
+}
+
+.button:hover{
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-base: -fx-accent ;
+}
+
+.table-view{
+    -fx-selection-bar-non-focused: derive(-fx-base, 50%);
+    -fx-background-color: linear-gradient(to bottom, #FFF4E7, #F2E2D2);
+    -fx-opacity: .9;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #E8DDCF, #B6CFCB);
+    -fx-background-radius: 3px 3px 0px 0px;
+    /*-fx-background-insets: 0 11px 0 0;*/
+    /*-fx-padding: 0 0 5px 0;*/
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-view .column-header .label{
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-weight: none;
+}
+
+.list-cell:even,
+.list-cell:odd,
+.table-row-cell:even,
+.table-row-cell:odd{
+    -fx-control-inner-background: derive(-fx-base, 15%);
+}
+
+.list-cell:empty,
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+
+.list-cell,
+.table-row-cell{
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color:transparent;
+}

@@ -1,0 +1,144 @@
+.root {
+    -fx-accent: #9C71A8;
+    -fx-background-image: url("flowers-and-mountain.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-font-family: Verdana;
+    -fx-text-fill: #9C71A8;
+    -fx-highlight-fill: #FFBABD;
+
+    -fx-my-menu-color: #F8EDEE;
+    -fx-my-menu-color-highlighted: #FFBABD;
+    -fx-my-menu-font-color: #9C71A8;
+
+    -fx-base: #FFE2E4;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background ;
+}
+
+#name {
+    -fx-underline: true;
+    -fx-font-style: italic;
+}
+
+.menu-item .label {
+    -fx-text-fill: -fx-accent;
+}
+
+.menu-item:focused {
+    -fx-background-color: #FFBABD;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #7A4D86;
+}
+
+.menu-bar {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+.text-field {
+    -fx-text-fill: #9C71A8;
+    -fx-highlight-fill: #FFBABD;
+}
+
+.text-area {
+    -fx-text-fill: #9C71A8;
+    -fx-highlight-fill: #FFBABD;
+}
+
+#Week {
+    -fx-font-style: italic;
+}
+
+#bgPane {
+    -fx-background-color: linear-gradient(#F8EDEE, #FFBABD);
+    -fx-opacity: .9;
+}
+
+#bgPane1 {
+    -fx-background-color: linear-gradient(#F8EDEE, #FFBABD);
+    -fx-opacity: .9;
+}
+
+.label {
+    -fx-text-fill: #9C71A8;
+    -fx-font-family: "Bell MT";
+    -fx-font-scale: 2;
+}
+
+.text-field {
+    -fx-background-color: #F8EDEE;
+}
+
+.grid-pane {
+    -fx-background-color: #F8EDEE;
+}
+
+#quotes {
+    -fx-background-color: #9C71A8;
+}
+
+#changeTheme {
+    -fx-focus-traversable: false;
+    -fx-text-fill: #9C71A8;
+    -fx-background-color: linear-gradient(#F8EDEE, #FFBABD);
+    -fx-border-color: #C8A9D1;
+    -fx-border-radius: 3;
+}
+
+.button{
+    -fx-focus-traversable: false;
+    -fx-text-fill: #9C71A8;
+    -fx-background-color: linear-gradient(#F8EDEE, #FFBABD);
+    -fx-border-color: #C8A9D1;
+    -fx-border-radius: 3;
+}
+
+.table-view {
+    /*-fx-background-color: linear-gradient(#FFE2E4, #E4B2C7);*/
+    -fx-background-color: rgba(248, 237, 238, 0.85);
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #E4B2C7, #C8A9D1);
+    -fx-background-radius: 3px 3px 0px 0px;
+    /*-fx-background-insets: 0 11px 0 0;*/
+    /*-fx-padding: 0 0 5px 0;*/
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+    /*-fx-text-background-color: red;*/
+}
+.table-row-cell:odd{
+    -fx-background-color: rgba(248, 237, 238, 0.85);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: rgba(255, 226, 228, 0.85);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}

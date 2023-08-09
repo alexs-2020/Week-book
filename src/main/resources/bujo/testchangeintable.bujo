@@ -1,0 +1,24 @@
+{
+  "name" : "",
+  "theme" : "LIGHTMODE",
+  "limit" : 3,
+  "schedule" : {
+    "events" : [ {
+      "name" : "dont",
+      "description" : "",
+      "day" : "WEDNESDAY",
+      "hour" : 10,
+      "minute" : 15,
+      "duration" : 13
+    } ]
+  },
+  "todos" : {
+    "tasks" : [ {
+      "name" : "tryagain",
+      "description" : "a",
+      "day" : "MONDAY",
+      "isComplete" : false
+    } ]
+  },
+  "notes" : ""
+}

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import cs3500.pa05.view.MaxNumTextField?>
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane maxHeight="900.0" maxWidth="1600.0" minHeight="800.0" minWidth="900.0" prefHeight="900.0" prefWidth="1600.0">
+      <children>
+         <VBox alignment="CENTER_RIGHT" layoutX="1408.0" layoutY="19.0" prefHeight="189.0" prefWidth="179.0" spacing="10.0">
+            <children>
+               <MenuButton fx:id="changeTheme" mnemonicParsing="false" text="Themes">
+                 <items>
+                     <MenuItem fx:id="noTheme" mnemonicParsing="false" text="No theme" />
+                   <MenuItem fx:id="darkMode" mnemonicParsing="false" text="Dark Mode" />
+                     <MenuItem fx:id="beachMode" mnemonicParsing="false" text="Beachy Vibes" />
+                   <MenuItem fx:id="flowerMode" mnemonicParsing="false" text="Sakura" />
+                 </items>
+               </MenuButton>
+               <HBox prefHeight="24.0" prefWidth="179.0">
+                  <children>
+                     <MaxNumTextField fx:id="maxField" prefHeight="26.0" prefWidth="46.0" promptText="Limit" />
+                     <Button fx:id="setMax" mnemonicParsing="false" onAction="#setMax" text="Set Max Events/Tasks" />
+                  </children>
+               </HBox>
+               <Button fx:id="openFile" mnemonicParsing="false" text="Open File" />
+               <Button fx:id="save" mnemonicParsing="false" text="Save" />
+               <Button fx:id="weekOverview" mnemonicParsing="false" text="Overview" />
+            </children>
+         </VBox>
+         <Label fx:id="name" alignment="CENTER" layoutX="537.0" layoutY="46.0" prefHeight="49.0" prefWidth="373.0" text="Week">
+            <font>
+               <Font size="36.0" />
+            </font>
+         </Label>
+         <VBox layoutX="11.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="1409.0">
+            <children>
+               <HBox maxWidth="1400.0" minWidth="1356.0" prefHeight="34.0" prefWidth="1356.0">
+                  <children>
+                     <Label fx:id="sunLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="34.0" prefWidth="180.0" text="Sunday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                     <Separator minWidth="10.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="62.0" />
+                     <Label fx:id="monLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="34.0" prefWidth="180.0" text="Monday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                     <Separator minWidth="10.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="20.0" />
+                     <Label fx:id="tuesLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="27.0" prefWidth="180.0" text="Tuesday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                     <Separator minWidth="10.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="20.0" />
+                     <Label fx:id="wedLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="17.0" prefWidth="180.0" text="Wednesday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                     <Separator minWidth="10.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="20.0" />
+                     <Label fx:id="thurLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="17.0" prefWidth="180.0" text="Thursday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                     <Separator minWidth="10.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="57.0" />
+                     <Label fx:id="friLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="17.0" prefWidth="180.0" text="Friday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                     <Separator minWidth="10.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="20.0" />
+                     <Label fx:id="satLabel" contentDisplay="CENTER" maxWidth="180.0" minWidth="180.0" prefHeight="17.0" prefWidth="180.0" text="Saturday">
+                        <font>
+                           <Font name="System Bold Italic" size="23.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label prefHeight="28.0" prefWidth="75.0" text="Events:">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </Label>
+               <HBox prefHeight="403.0" prefWidth="1333.0">
+                  <children>
+                     <TableView fx:id="sundayTable" editable="true" prefHeight="200.0" prefWidth="250.0" HBox.hgrow="NEVER">
+                        <columns>
+                           <TableColumn fx:id="nameColSu" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColSu" minWidth="50.0" prefWidth="50.0" text="Desc" />
+                           <TableColumn maxWidth="60.0" minWidth="60.0" onEditCommit="#handleNameChange" prefWidth="60.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourSun" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="HR" />
+                                 <TableColumn fx:id="startMinSun" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColSu" maxWidth="90.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="63.0" text="Duration" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="mondayTable" editable="true" prefHeight="200.0" prefWidth="250.0">
+                        <columns>
+                           <TableColumn fx:id="nameColMo" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColMo" minWidth="50.0" prefWidth="50.0" text="Des" />
+                           <TableColumn maxWidth="-Infinity" minWidth="-Infinity" onEditCommit="#handleNameChange" prefWidth="60.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourMon" maxWidth="-Infinity" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="HR" />
+                                 <TableColumn fx:id="startMinMon" maxWidth="-Infinity" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColMo" maxWidth="46.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="46.0" text="Duration" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="tuesdayTable" editable="true" prefHeight="330.0" prefWidth="250.0">
+                       <columns>
+                         <TableColumn fx:id="nameColTu" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColTu" minWidth="50.0" prefWidth="50.0" text="Desc" />
+                           <TableColumn maxWidth="60.0" minWidth="60.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourTues" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="HR" />
+                                 <TableColumn fx:id="startMinTues" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColTu" maxWidth="46.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="46.0" text="Duration" />
+                       </columns>
+                     </TableView>
+                     <TableView fx:id="wednesdayTable" editable="true" prefHeight="332.0" prefWidth="250.0">
+                        <columns>
+                           <TableColumn fx:id="nameColWe" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColWe" minWidth="50.0" prefWidth="50.0" text="Desc" />
+                           <TableColumn maxWidth="64.0" minWidth="38.0" onEditCommit="#handleNameChange" prefWidth="44.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourWed" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="HR" />
+                                 <TableColumn fx:id="startMinWed" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColWe" maxWidth="75.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="65.0" text="Duration" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="thursdayTable" editable="true" prefHeight="200.0" prefWidth="250.0">
+                        <columns>
+                           <TableColumn fx:id="nameColTh" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColTh" minWidth="50.0" prefWidth="50.0" text="Des" />
+                           <TableColumn maxWidth="60.0" minWidth="60.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourThurs" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="HR" />
+                                 <TableColumn fx:id="startMinThurs" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColTh" maxWidth="46.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="46.0" text="Duration" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="fridayTable" editable="true" prefHeight="200.0" prefWidth="250.0">
+                        <columns>
+                           <TableColumn fx:id="nameColFr" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColFr" minWidth="50.0" prefWidth="50.0" text="Des" />
+                           <TableColumn maxWidth="60.0" minWidth="60.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourFri" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="HR" />
+                                 <TableColumn fx:id="startMinFri" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColFr" maxWidth="47.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="47.0" text="Duration" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="saturdayTable" editable="true" prefHeight="332.0" prefWidth="250.0">
+                        <columns>
+                           <TableColumn fx:id="nameColSa" minWidth="50.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="Name" />
+                           <TableColumn fx:id="desColSa" minWidth="50.0" onEditCommit="#handleDesChange" prefWidth="50.0" text="Des" />
+                           <TableColumn maxWidth="60.0" minWidth="60.0" onEditCommit="#handleNameChange" prefWidth="50.0" text="StartTime">
+                              <columns>
+                                 <TableColumn fx:id="startHourSat" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="HR" />
+                                 <TableColumn fx:id="startMinSat" maxWidth="27.0" minWidth="27.0" onEditCommit="#handleNameChange" prefWidth="27.0" text="M" />
+                              </columns>
+                           </TableColumn>
+                           <TableColumn fx:id="durColSa" maxWidth="47.0" minWidth="30.0" onEditCommit="#handleDurChange" prefWidth="47.0" text="Duration" />
+                        </columns>
+                     </TableView>
+                  </children>
+               </HBox>
+               <Label fx:id="TaskLabel" prefHeight="28.0" prefWidth="120.0" text="Tasks:">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </Label>
+               <HBox prefHeight="412.0" prefWidth="1464.0">
+                  <children>
+                     <TableView fx:id="sundayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="335.0" prefWidth="200.0" HBox.hgrow="NEVER">
+                        <columns>
+                           <TableColumn fx:id="nameColSuTa" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColSuTa" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColSuTa" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="mondayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                           <TableColumn fx:id="nameColMoTa" maxWidth="50.0" minWidth="66.0" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColMoTa" maxWidth="50.0" minWidth="66.0" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColMoTa" maxWidth="50.0" minWidth="66.0" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="tuesdayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="330.0" prefWidth="200.0">
+                        <columns>
+                           <TableColumn fx:id="nameColTuTa" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColTuTa" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColTuTa" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="wednesdayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="332.0" prefWidth="200.0">
+                        <columns>
+                           <TableColumn fx:id="nameColWeTa" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColWeTa" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColWeTa" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="thursdayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                           <TableColumn fx:id="nameColThTa" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColThTa" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColThTa" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="fridayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                           <TableColumn fx:id="nameColFrTa" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColFrTa" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColFrTa" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                     <TableView fx:id="saturdayTableTa" editable="true" onMouseClicked="#setComplete" prefHeight="332.0" prefWidth="200.0">
+                        <columns>
+                           <TableColumn fx:id="nameColSaTa" onEditCommit="#handleNameChange" prefWidth="66.0" text="Name" />
+                           <TableColumn fx:id="desColSaTa" onEditCommit="#handleDesChange" prefWidth="66.0" text="Des" />
+                           <TableColumn fx:id="completeColSaTa" prefWidth="66.0" text="Complete" />
+                        </columns>
+                     </TableView>
+                  </children>
+               </HBox>
+               <Pane prefHeight="181.0" prefWidth="1058.0">
+                  <children>
+                     <Pane fx:id="bgPane" layoutX="1184.0" layoutY="31.0" prefHeight="27.0" prefWidth="211.0" />
+                     <Pane fx:id="bgPane1" layoutY="4.0" prefHeight="79.0" prefWidth="329.0" />
+                     <GridPane fx:id="grid" alignment="TOP_RIGHT" layoutX="1192.0" prefHeight="102.0" prefWidth="203.0">
+                        <columnConstraints>
+                           <ColumnConstraints fillWidth="false" hgrow="ALWAYS" maxWidth="500.0" minWidth="10.0" prefWidth="85.9333984375" />
+                           <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" maxWidth="300.0" minWidth="99.79998779296875" prefWidth="117.0666015625" />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="NEVER" />
+                        </rowConstraints>
+                        <children>
+                           <Label prefHeight="18.0" prefWidth="84.0" text="Max amount:" GridPane.rowIndex="1" />
+                           <Button fx:id="addToCalendar" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" text="Add to Calendar" GridPane.columnIndex="1" />
+                           <Label fx:id="maxAmount" alignment="CENTER" prefHeight="18.0" prefWidth="71.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        </children>
+                     </GridPane>
+                     <GridPane layoutX="7.0" layoutY="3.0" prefHeight="58.0" prefWidth="330.0">
+                       <columnConstraints>
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                         <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                         <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                        <children>
+                           <Label prefHeight="17.0" prefWidth="308.0" text="Triple-click a task to change its completion status" />
+                           <Label prefHeight="17.0" prefWidth="287.0" text="Double-click to edit a task or event" GridPane.rowIndex="1" />
+                        </children>
+                     </GridPane>
+                  </children>
+               </Pane>
+            </children>
+         </VBox>
+         <AnchorPane layoutY="3.0" prefHeight="52.0" prefWidth="127.0">
+            <children>
+               <Button fx:id="viewTasks" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="127.0" text="View All Tasks" />
+            </children>
+         </AnchorPane>
+         <AnchorPane fx:id="taskPane" layoutX="6.0" layoutY="51.0" prefHeight="839.0" prefWidth="206.0">
+            <children>
+               <TextField fx:id="search" layoutX="4.0" layoutY="8.0" onKeyTyped="#searchTasks" prefHeight="25.0" prefWidth="191.0" promptText="Search Tasks" />
+               <Label layoutX="4.0" layoutY="371.0" prefHeight="32.0" prefWidth="150.0" text="All Tasks:">
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </Label>
+               <TableView fx:id="allTasks" layoutX="-1.0" layoutY="403.0" prefHeight="440.0" prefWidth="200.0">
+                 <columns>
+                     <TableColumn fx:id="nameCol" editable="true" prefWidth="100.0" text="Name" />
+                     <TableColumn fx:id="compCol" editable="false" prefWidth="100.0" text="Complete" />
+                 </columns>
+               </TableView>
+               <TableView fx:id="searchTasks" layoutX="-1.0" layoutY="39.0" prefHeight="297.0" prefWidth="200.0">
+                  <columns>
+                     <TableColumn fx:id="nameColSearch" editable="false" prefWidth="100.0" text="Name" />
+                     <TableColumn fx:id="compColSearch" editable="false" prefWidth="100.0" text="Complete" />
+                  </columns>
+               </TableView>
+            </children>
+         </AnchorPane>
+         <TextField fx:id="nameForWeek" layoutX="600.0" layoutY="16.0" prefHeight="26.0" prefWidth="225.0" />
+         <Label fx:id="nameLabel" layoutX="537.0" layoutY="21.0" prefHeight="18.0" prefWidth="50.0" text="Name:" />
+         <Button fx:id="setName" layoutX="843.0" layoutY="17.0" mnemonicParsing="false" text="Set Name" />
+         <ImageView fx:id="icon" fitHeight="20.0" fitWidth="20.0" layoutX="1566.0" layoutY="866.0" pickOnBounds="true" preserveRatio="true" />
+         <VBox layoutX="1431.0" layoutY="205.0" prefHeight="606.0" prefWidth="164.0">
+            <children>
+               <Label text="Notepad">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+               <TextArea fx:id="quotes" prefHeight="575.0" prefWidth="135.0" promptText="Quotes &amp; Notes" wrapText="true" />
+            </children>
+         </VBox>
+      </children></AnchorPane>
+</Scene>

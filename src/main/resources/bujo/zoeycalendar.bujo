@@ -1,0 +1,41 @@
+{
+  "name" : "Zoey's Calendar",
+  "theme" : "FLOWERMODE",
+  "limit" : 5,
+  "schedule" : {
+    "events" : [ {
+      "name" : "League",
+      "description" : "",
+      "day" : "FRIDAY",
+      "hour" : 6,
+      "minute" : 0,
+      "duration" : 15684
+    }, {
+      "name" : "Visit MFA",
+      "description" : "Wave painting",
+      "day" : "SATURDAY",
+      "hour" : 13,
+      "minute" : 15,
+      "duration" : 90
+    } ]
+  },
+  "todos" : {
+    "tasks" : [ {
+      "name" : "Clean",
+      "description" : "bathroom and bed",
+      "day" : "MONDAY",
+      "isComplete" : false
+    }, {
+      "name" : "Pay billing",
+      "description" : "For credit card",
+      "day" : "WEDNESDAY",
+      "isComplete" : false
+    }, {
+      "name" : "Lift weights",
+      "description" : "50 lbs",
+      "day" : "SATURDAY",
+      "isComplete" : true
+    } ]
+  },
+  "notes" : "\"Success is not final;\n Failure is not fatal;\n It is the courage to continue that counts.\"\n ~ Winston S. Churchill\n\nNote to self:\n- Pack luggage by Friday\n- Write essay on \"Taipei: City of Displacement\"\n- Command Line CTF due Tuesday 11:59PM\n- Eat corn"
+}

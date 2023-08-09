@@ -1,0 +1,36 @@
+{
+  "name" : "hi",
+  "theme" : "FLOWERMODE",
+  "limit" : 90,
+  "schedule" : {
+    "events" : [ {
+      "name" : "joe",
+      "description" : "description",
+      "day" : "TUESDAY",
+      "hour" : 1,
+      "minute" : 23,
+      "duration" : 100
+    }, {
+      "name" : "mary",
+      "description" : "description2",
+      "day" : "MONDAY",
+      "hour" : 2,
+      "minute" : 24,
+      "duration" : 101
+    } ]
+  },
+  "todos" : {
+    "tasks" : [ {
+      "name" : "bob",
+      "description" : "description3",
+      "day" : "WEDNESDAY",
+      "isComplete" : true
+    }, {
+      "name" : "eric",
+      "description" : "description4",
+      "day" : "SUNDAY",
+      "isComplete" : true
+    } ]
+  },
+  "notes" : "blahblah"
+}

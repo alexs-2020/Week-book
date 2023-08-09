@@ -1,0 +1,12 @@
+{
+  "name" : "Feeling Peachy",
+  "theme" : "BEACHMODE",
+  "limit" : 7,
+  "schedule" : {
+    "events" : [ ]
+  },
+  "todos" : {
+    "tasks" : [ ]
+  },
+  "notes" : "Here are my notes!\n\nYippeeee\n\nhow are paragraphs?"
+}

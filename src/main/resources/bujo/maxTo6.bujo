@@ -1,0 +1,12 @@
+{
+  "name" : "",
+  "theme" : "DARKMODE",
+  "limit" : 6,
+  "schedule" : {
+    "events" : [ ]
+  },
+  "todos" : {
+    "tasks" : [ ]
+  },
+  "notes" : ""
+}
